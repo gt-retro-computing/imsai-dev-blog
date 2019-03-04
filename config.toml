@@ -1,4 +1,4 @@
-baseURL = "https://imsai.dev"
+#baseURL = "https://imsai.dev"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "The IMSAI Gang"
