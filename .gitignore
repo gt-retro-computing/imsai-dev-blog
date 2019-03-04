@@ -1,0 +1,6 @@
+public
+*/_gen/*
+.idea
+*.iws
+*.iml
+*.ipr
