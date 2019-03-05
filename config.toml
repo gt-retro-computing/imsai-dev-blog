@@ -1,4 +1,5 @@
 #baseURL = "https://imsai.dev"
+staticDir = ["static"]
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "The IMSAI Gang"
@@ -34,10 +35,10 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   # Metadata mostly used in document's head
   # description = ""
   # images = [""]
-  themeColor = "#557dcb"
+  # themeColor = "#557dcb"
 
   homeSubtitle = "Restoring an IMSAI 8080 and write software to go along with it."
-  # bgImg = ""  # Homepage background-image URL
+  bgImg = ""  # Homepage background-image URL
 
   # Toggling this option needs to rebuild SCSS, requires Hugo extended version
   justifyContent = false  # Set "text-align: justify" to `.content`.
@@ -53,7 +54,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
     url = "posts/"
     weight = 10
 
-  [[menu.main]]
-    name = "About"
-    url = "about-hugo/"
-    weight = 20
+#  [[menu.main]]
+#    name = "About"
+#    url = "about-hugo/"
+#    weight = 20
