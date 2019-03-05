@@ -38,6 +38,8 @@ The 4 bit register file contains read/write protection bits when operate in prot
 
 ### Known limitations
 
+
+
 ### Measurement of the BUS status during different instruction cycles
 ![Screenshot 1](/image/post/mmu_design/scope_6.png)
 <center>Scope Screenshot of the TODO cycle</center>
