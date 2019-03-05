@@ -1,6 +1,6 @@
 ---
 title: "Power Up!"
-date: 2018-02-01
+date: 2019-02-01
 draft: false
 featuredImg: "/image/imsai.jpg"
 author: "Codetector"
