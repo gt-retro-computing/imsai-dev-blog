@@ -5,7 +5,7 @@ draft: false
 featuredImg: "/image/imsai.jpg"
 author: "Codetector"
 tags: 
-  - LegacyHardware
+  - Hardware
   - General
 ---
 # The IMSAI 8080
