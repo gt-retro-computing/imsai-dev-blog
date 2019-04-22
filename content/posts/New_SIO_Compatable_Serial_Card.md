@@ -55,5 +55,35 @@ used a charge-pump to provide the negative voltage required by the RS-232 standa
 The IMSAI operated at TTL Logic level. Although many pins on the STM32 are 5V
 tolerant(It can acceot 5V voltage level), non of its pin can produce a high enough 
 voltage for the IMSAI to consider it a logical '1'. Thus we need a PNP transistor
-with 2 supporting resistor on each of the *DI* lines to do level shifting.
+with 2 supporting resistor on each of the *DI** lines to do level shifting.
+
+# Measurement
+In order to operate on the OUTPUT port of the Intel 8080 processor, we need to 
+decode the signal on the S100 Bus. Due the failure of me last time naively trying
+to construct a output address decoder, I will make some measurements before 
+continuing.
+
+## **OUT**put port signal decoding
+![IMSAI Executing an OUT Instruction](/image/post/new_sio_card/Out.png)
+
+The above image is the Intel 8080 processor executing and OUT instruction to port
+0xFF (The Lights) with data 0xFF.
+<details><summary>Exact instruction listing.</summary>
+```asm
+CMA ; Complement A, as A is initialized to 0, this makes it 0xFF
+OUT 0xFF ;
+HLT ; HALT is added to assure clean signal capature. The Wait line is used for trigger
+```
+</details>
+
+As we can see from the logic anaylizer, the address of the port is first written to 
+the S100 Bus, then sOUT signal comes HIGH, at this point the address on the bus should
+be a valid OUT PORT address. (This address is duplicated (A0-A7 = A8-A15) on the bus).
+This is when port matching could happen; however, data is not valid at this moment. 
+Output data is only valid when sOUT is HIGH **AND** P̅W̅R̅ is LOW. 
+
+## Input Port Signal Decoding
+
+![IMSAI Executing an IN Instruction](/image/post/new_sio_card/In.png)
+
 
