@@ -1,0 +1,3 @@
+[submodule "public"]
+	path = public
+	url = git@github.com:gt-retro-computing/gt-retro-computing.github.io.git
