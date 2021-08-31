@@ -1,7 +1,6 @@
 ---
 title: "LLVM For Dummies: (1)Intro & Assembler"
-date: 2019-09-06T00:00:00-04:00
-draft: true
+date: 2020-10-06T00:00:00-04:00
 toc: false
 author: Codetector
 tags: 
